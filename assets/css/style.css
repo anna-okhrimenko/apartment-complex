@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #4aaee81c;
+}
+
+.build-map {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1070px;
+    border: 2px solid black;
+}
+
+.build-item, .first-build-item {
+    cursor: url(../img/cursor-zoom.png) 0 0, auto;
+}
+
+.build-item:hover > path {
+    fill: #d8ff0040;
+}
+
+.build-path {
+    stroke: #ffffff00;
+    fill: #ffffff00;
+}
+
+.outer-circle {
+    stroke: black;
+    stroke-width: 2px;
+}
+
+.inner-circle {
+    fill: #AC9F9F; 
+    stroke: black;
+}
+
+.build-number text {
+    font-size: 34px;
+    font-weight: 800;
+    
+}
+
+.build-info, .first-build-info {
+    width: 350px;
+    padding: 12px 25px;
+    gap: 15px;
+    display: grid;
+    border: 1px solid;
+    border-radius: 20px;
+    font-size: 25px;
+    background-color: #d8ff0075;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    pointer-events: none;
+}
+
+.build-info {
+    left: auto;
+    right: 20px;
+}
+
+.build-info-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.first-build {
+    max-width: 870px;
+    margin: 0 auto;
+    border: 2px solid black;
+    position: relative;
+    
+}
+
+.first-build-item path {
+    stroke: #ffffff00;
+    fill: #ffffff00;
+}
+
+.first-build-item:hover path {
+    fill: #d8ff0040;
+}
+
+.hidden-floors:hover {
+    cursor: url(../img/cursor-multiply.png) 4 12, auto;
+}
+
+.hidden-floors:hover > path {
+    fill: #ff005740;
+}
+
+.hidden-floors-info {
+    background-color: #df2a685c; ;
+}
+
+.status path {
+    stroke: none;
+}
+
+.build-item:hover .status-open path {
+    stroke: #3CC880;
+    
+}
+
+.hidden-floors:hover .status-close path {
+    stroke: #DB2929;
+}
+
+.hidden-floors:hover .status-open path {
+    stroke: none;
+}
+
+/* modal */
+
+.modal-flats {
+    margin: 0 auto;
+    max-width: 950px;
+    border: 2px solid black;
+}
+
+.flats-apartment > path {
+    stroke: #ffffff00;
+    fill: #ffffff00;
+}
+
+.flats-apartment:hover > path {
+    fill: #0011ff40;
+}
+
+@media screen and (max-width: 768px) {
+    .build-info, .first-build-info {
+        margin: 0 auto;
+        position: static;
+        max-width: 100%;
+    }
+}
+
