@@ -130,10 +130,14 @@ body {
     margin: 0 auto;
 }
 
+.modal-flats {
+    max-width: 950px;
+}
+
 .flats-svg-body {
     height: calc(100vh - 98px);
     margin: 0 auto;
-    max-width: 950px;
+    max-width: 100%;
     border: 2px solid black;
 }
 
@@ -154,7 +158,8 @@ body {
     position: absolute;
     right: 0;
     top: 0;
-    bottom: 0;
+    /* bottom: 0; */
+    min-height: 100vh;
     width: 100%;
     transition: .5s;
     transform: translateX(100%);
