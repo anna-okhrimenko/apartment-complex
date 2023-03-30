@@ -59,3 +59,16 @@ firstBuildItem.forEach(item => {
 function isNumber(value) {
     return (parseInt(value) >= 0 || parseInt(value) <= 0);
 }
+
+const flatsBlock = document.querySelector('.flats-block');
+const btns = document.querySelector('.flats-block .btn-close');
+btns.onclick = function() {
+    flatsBlock.classList.remove('active');
+}
+
+const apartment = document.querySelectorAll('.flats-apartment');
+    apartment.forEach(function (item) {
+        item.onclick = function() {
+            flatsBlock.classList.add('active');
+        }
+    })

@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Delicious Handrawn', cursive;
 }
 
 body {
@@ -115,9 +118,20 @@ body {
     stroke: none;
 }
 
+
 /* modal */
 
-.modal-flats {
+.modal-content {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.modal-body {
+    margin: 0 auto;
+}
+
+.flats-svg-body {
+    height: calc(100vh - 98px);
     margin: 0 auto;
     max-width: 950px;
     border: 2px solid black;
@@ -132,11 +146,66 @@ body {
     fill: #0011ff40;
 }
 
+/* aside popup */
+
+.flats-block {
+    margin: 0 auto;
+    padding: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    transition: .5s;
+    transform: translateX(100%);
+    background-color: #a4c7dc;
+}
+
+.flats-block.active {
+    transform: translateX(0%);
+}
+
+h1 {
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.flats-body {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flats-body .img-fluid {
+    max-width: calc(100% - 300px);
+    height: auto;
+}
+
+.flats-info {
+    width: 300px;
+}
+
+.flats-info li {
+    margin: 10px;
+    font-weight: 24px;
+}
+
 @media screen and (max-width: 768px) {
     .build-info, .first-build-info {
         margin: 0 auto;
         position: static;
         max-width: 100%;
     }
+
+    .flats-body {
+        flex-direction: column;
+    }
+
+    .flats-body .img-fluid {
+        max-width: 100%;
+        
+    }
+    
 }
 
