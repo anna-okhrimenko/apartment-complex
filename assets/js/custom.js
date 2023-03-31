@@ -64,11 +64,29 @@ const flatsBlock = document.querySelector('.flats-block');
 const btns = document.querySelector('.flats-block .btn-close');
 btns.onclick = function() {
     flatsBlock.classList.remove('active');
-}
+};
 
 const apartment = document.querySelectorAll('.flats-apartment');
-    apartment.forEach(function (item) {
+apartment.forEach(function (item) {
+    
+    const status = item.getAttribute('data-status');
+    const number = item.querySelector('.flats-sticker-label');
+    const stickerStatus = item.querySelector('.flats-sticker-status tspan');
+    if (status == 'special') {
+        number.style.fill = "#23ad21";
+        stickerStatus.innerHTML = "Знижка";
+
         item.onclick = function() {
             flatsBlock.classList.add('active');
-        }
-    })
+        };
+
+    }else if (status == 'sold') {
+        number.style.fill = "#ca2121";
+        stickerStatus.innerHTML = "Продано";
+        item.classList.add('sold')
+    }else if (status == 'booked') {
+        number.style.fill = "#4e21ca";
+        stickerStatus.innerHTML = "Бронь";
+        item.classList.add('booked')
+    }
+});

@@ -80,6 +80,19 @@ body {
     
 }
 
+.back-icon {
+    width: 40px;
+    height: 40px;
+    display: block;
+    color: #535261;
+    position: fixed;
+    top: 0px;
+}
+
+.back-icon:hover {
+    color: #b3b1b1;
+}
+
 .first-build-item path {
     stroke: #ffffff00;
     fill: #ffffff00;
@@ -147,7 +160,33 @@ body {
 }
 
 .flats-apartment:hover > path {
-    fill: #0011ff40;
+    fill: #399e3fc4;
+    cursor: url(../img/cursor-zoom.png) 0 0, auto;
+}
+
+.flats-apartment.booked:hover > path {
+    fill: #0300b6c4;
+    cursor: url(../img/cursor-multiply.png) 4 12, auto;
+}
+
+.flats-apartment.sold:hover > path {
+    fill: #ea1212c4;
+    cursor: url(../img/cursor-multiply.png) 4 12, auto;
+}
+
+.flats-sticker {
+    width: 186px; 
+    height: 52px;
+    fill: #FEFEFE; 
+    stroke: black; 
+    stroke-width: 2px;
+    rx: 9px;
+}
+
+.flats-sticker-number tspan {
+    fill: black;
+    font-size: 21px;
+    font-weight: 600;
 }
 
 /* aside popup */
