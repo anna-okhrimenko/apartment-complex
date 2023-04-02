@@ -62,9 +62,11 @@ function isNumber(value) {
 
 const flatsBlock = document.querySelector('.flats-block');
 const btns = document.querySelector('.flats-block .btn-close');
-btns.onclick = function() {
-    flatsBlock.classList.remove('active');
-};
+if(btns) {
+    btns.onclick = function() {
+        flatsBlock.classList.remove('active');
+    }
+}
 
 const apartment = document.querySelectorAll('.flats-apartment');
 apartment.forEach(function (item) {
@@ -90,3 +92,15 @@ apartment.forEach(function (item) {
         item.classList.add('booked')
     }
 });
+
+// accordion
+
+const installAccordion = function() {
+    const acordion = document.querySelectorAll('.acordion-title');
+    acordion.forEach(function (title) {
+        title.onclick = function() {
+            title.closest('.acordion-item').classList.toggle('active');
+        }
+    });
+}
+installAccordion()
